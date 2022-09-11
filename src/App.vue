@@ -63,7 +63,7 @@
     <table class="table bordered striped">
       <thead>
         <tr>
-          <th>Nombre</th>
+          <th>Name</th>
           <th>Apellido</th>
           <th>Edad</th>
           <th>Estado Civil</th>
