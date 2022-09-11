@@ -128,7 +128,7 @@ export default {
       estados_civiles: [
         {
           id: 'S',
-          descripcion:'Soltero'
+          descripcion:'NO SE'
         },
         {
           id: 'C',
