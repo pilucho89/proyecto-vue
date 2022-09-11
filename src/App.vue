@@ -149,11 +149,24 @@ export default {
   mounted()
   {
     var elems=document.querySelectorAll('select');
-  this.select_instances=M.FormSelect.init(elems, null);
+     this.select_instances=M.FormSelect.init(elems, null);
   },
   methods:{
+       cleanForm(){
+    this.nombre='';
+      this.apellido= '';
+      this.edad= 0;
+      this.estado_civil='';
+      this.correo='';
+      this.suscrito= false;
+      this.pasatiempo ='';
+      this.pasatiempos= [];
+      this.select_instances=[];
+  },
     agregarUsuario()
     {
+
+
       var data={
         nombre:this.nombre,
         edad:this.edad,
@@ -165,19 +178,13 @@ export default {
         
       };
       this.usuarios.push(data);
-      this.nombre='';
-      this.apellido= '';
-      this.edad= 0;
-      this.estado_civil='';
-      this.correo='';
-      this.suscrito= false;
-      this.pasatiempo ='';
-      this.pasatiempos= [];
-      this.select_instances=[];
+      this.cleanForm();
     },
 
     agregarPasatiempo()
   {
+    if(this.pasatiempo !== null && this.pasatiempo !== ""){
+      console.log("Pasatiempo Not Found")
     var total=this.pasatiempos.length;
     var ultimo=0;
     if(total>0)
@@ -190,11 +197,14 @@ export default {
     };
     this.pasatiempos.push(data);
     this.pasatiempo='';
-  },
+  }
+    }
+  ,
   eliminar(index){
     if (!confirm('¿Desea eliminar el registro?')) return;
     this.usuarios.splice(index,1);
-  }
+  },
+
     
   }
   
