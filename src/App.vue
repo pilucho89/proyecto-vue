@@ -131,7 +131,7 @@ export default {
           descripcion:'NO SE'
         },
         {
-          id: 'Casdasd',
+          id: 'C',
           descripcion:'Casado'
         },
         {
